@@ -1,0 +1,193 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+    display: grid;
+    margin: 0px;
+}
+
+
+//----Index-----
+.mainProductos {
+    display: grid;
+    justify-content: center;
+    background-color: whitesmoke;
+    
+}
+
+.pizzas {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+
+    .elemento {
+        border: 2px outset;
+        border-radius: 5px;
+        display: flex;
+        padding: 5px 5px 5px 5px;
+        width: 290px;
+        justify-content: space-around;
+        background-color: white;
+    
+        div {
+            display: grid;
+            justify-content: center;
+            width: 104px;
+            text-align: center;
+    
+            h5 {
+                display: block;
+                justify-content: center;
+                height: 10px;
+            }
+
+            input {
+                width: 89px;
+                justify-self: center;
+            }
+        }
+        img {
+            align-self: center;
+        }
+    }
+}
+
+.empanadas {
+    @extend .pizzas
+}
+
+.asideIndex {
+    margin-top: 87px;
+    position: fixed;
+    justify-self: end;
+    margin-right: 5px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px 5px 5px 5px;
+    overflow-y: auto;
+    max-height: 400px;
+    overflow: auto;
+
+    .productoLista {
+        display: flex;
+        padding: 5px 5px 5px 5px;
+        border-bottom: 2px outset;
+        background-color: white;
+        width: 280px;
+        
+        div {
+            display: grid;
+            height: 70px;
+            display: grid;
+
+            h5 {
+                height: 0px;
+                width: 150px;
+                align-self: center;
+            }
+            div {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 1fr 1fr;
+
+                h5 {
+                    height: 0px;
+                    width: 50px;
+                    align-self: center;
+                    font-size: 18px;
+                    margin-bottom: 38px;
+                    font-size: 15px;
+                }
+
+                .btnBorrar {
+                    height: 20px;
+                    width: 50px;
+                    align-self: center;
+                    margin-top: 9px;
+                }
+            }
+        }
+
+        img {
+            height: 90px;
+        }
+    }
+}
+
+
+//-----Direccion---------
+.mainDireccion {
+    display: grid;
+    justify-content: start;
+    margin-left: 50px;
+    margin-top: 20px;
+
+    textarea {
+        resize: none;
+    }
+
+    .popupContainer {
+        position: absolute;
+        display: grid;
+        justify-self: center;
+        justify-content: center;
+        align-content: center;
+        align-self: center;
+        visibility: hidden;
+    
+        .popup {
+            background-color: white;
+            height: 150px;
+            width: 250px;
+            border-radius: 5px;
+            border: 5px solid black;
+            justify-self: center;
+            align-self: center;
+    
+            .popupHeader {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                border-bottom: 2px solid black;
+    
+                p {
+                    justify-self: end;
+                    margin-right: 5px;
+
+                    &:hover {
+                        cursor: pointer;
+                        cursor: hand;
+                    }
+                }
+            }
+    
+            .popupMensaje {
+                text-align: center;
+                display: grid;
+                align-content: center;
+                height: 85px;
+    
+                p {
+                    align-self: center;
+                    
+                    
+                }
+            }
+        }
+    }
+
+    .aparecer {
+        visibility: visible;
+    }
+}
+
+
+.asideDireccion {
+    margin-top: 100px;
+    justify-self: end;
+    position: absolute;
+}
+

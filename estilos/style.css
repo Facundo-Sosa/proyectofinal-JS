@@ -1,0 +1,236 @@
+* {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  margin: 0px;
+}
+
+.mainProductos {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: whitesmoke;
+}
+
+.pizzas, .empanadas {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.pizzas .elemento, .empanadas .elemento {
+  border: 2px outset;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 5px 5px 5px;
+  width: 290px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+}
+
+.pizzas .elemento div, .empanadas .elemento div {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 104px;
+  text-align: center;
+}
+
+.pizzas .elemento div h5, .empanadas .elemento div h5 {
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 10px;
+}
+
+.pizzas .elemento div input, .empanadas .elemento div input {
+  width: 89px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.pizzas .elemento img, .empanadas .elemento img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.asideIndex {
+  margin-top: 87px;
+  position: fixed;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 5px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: white;
+  padding: 5px 5px 5px 5px;
+  overflow-y: auto;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.asideIndex .productoLista {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 5px 5px 5px;
+  border-bottom: 2px outset;
+  background-color: white;
+  width: 280px;
+}
+
+.asideIndex .productoLista div {
+  display: -ms-grid;
+  display: grid;
+  height: 70px;
+  display: grid;
+}
+
+.asideIndex .productoLista div h5 {
+  height: 0px;
+  width: 150px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.asideIndex .productoLista div div {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.asideIndex .productoLista div div h5 {
+  height: 0px;
+  width: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 18px;
+  margin-bottom: 38px;
+  font-size: 15px;
+}
+
+.asideIndex .productoLista div div .btnBorrar {
+  height: 20px;
+  width: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 9px;
+}
+
+.asideIndex .productoLista img {
+  height: 90px;
+}
+
+.mainDireccion {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.mainDireccion textarea {
+  resize: none;
+}
+
+.mainDireccion .popupContainer {
+  position: absolute;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  visibility: hidden;
+}
+
+.mainDireccion .popupContainer .popup {
+  background-color: white;
+  height: 150px;
+  width: 250px;
+  border-radius: 5px;
+  border: 5px solid black;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainDireccion .popupContainer .popup .popupHeader {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid black;
+}
+
+.mainDireccion .popupContainer .popup .popupHeader p {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin-right: 5px;
+}
+
+.mainDireccion .popupContainer .popup .popupHeader p:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.mainDireccion .popupContainer .popup .popupMensaje {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  height: 85px;
+}
+
+.mainDireccion .popupContainer .popup .popupMensaje p {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mainDireccion .aparecer {
+  visibility: visible;
+}
+
+.asideDireccion {
+  margin-top: 100px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  position: absolute;
+}
+/*# sourceMappingURL=style.css.map */
