@@ -8,13 +8,24 @@ body {
   margin: 0px;
 }
 
+.headerIndex {
+  background-color: #edf2f4;
+  border-bottom: 5px outset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .mainProductos {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: whitesmoke;
+  background-color: #ef233c;
 }
 
 .pizzas, .empanadas {
@@ -30,7 +41,8 @@ body {
 }
 
 .pizzas .elemento, .empanadas .elemento {
-  border: 2px outset;
+  border-right: 2px outset;
+  border-bottom: 2px outset;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,7 +51,7 @@ body {
   width: 290px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  background-color: white;
+  background-color: #d90429;
 }
 
 .pizzas .elemento div, .empanadas .elemento div {
@@ -73,18 +85,22 @@ body {
 }
 
 .asideIndex {
-  margin-top: 87px;
+  margin-top: 95px;
   position: fixed;
   -ms-grid-column-align: end;
       justify-self: end;
   margin-right: 5px;
   text-align: center;
   border-radius: 5px;
-  background-color: white;
+  background-color: #d90429;
   padding: 5px 5px 5px 5px;
   overflow-y: auto;
   max-height: 400px;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 300px;
+  border-right: 2px outset;
+  border-bottom: 2px outset;
 }
 
 .asideIndex .productoLista {
@@ -93,8 +109,9 @@ body {
   display: flex;
   padding: 5px 5px 5px 5px;
   border-bottom: 2px outset;
-  background-color: white;
-  width: 280px;
+  border-right: 2px outset;
+  background-color: #d90429;
+  width: 285px;
 }
 
 .asideIndex .productoLista div {
@@ -144,6 +161,53 @@ body {
 
 .asideIndex .productoLista img {
   height: 90px;
+  margin-right: 5px;
+}
+
+.asideIndex .btnPagar {
+  height: 60px;
+  width: 300px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #e7890e;
+  margin-top: 5px;
+}
+
+.asideIndex .btnPagar a {
+  text-decoration: none;
+  color: black;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.asideIndex .btnPagar a:hover {
+  font-size: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.headerDireccion {
+  background-color: #edf2f4;
+  border-bottom: 5px outset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerDireccion a {
+  position: absolute;
+}
+
+.headerDireccion img {
+  margin-left: 41%;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .mainDireccion {
@@ -152,79 +216,29 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+  background-color: #ef233c;
+}
+
+.mainDireccion .formulario {
+  background-color: #d90429;
   margin-left: 50px;
   margin-top: 20px;
-}
-
-.mainDireccion textarea {
-  resize: none;
-}
-
-.mainDireccion .popupContainer {
-  position: absolute;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-grid-row-align: center;
-      align-self: center;
-  visibility: hidden;
-}
-
-.mainDireccion .popupContainer .popup {
-  background-color: white;
-  height: 150px;
-  width: 250px;
-  border-radius: 5px;
-  border: 5px solid black;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.mainDireccion .popupContainer .popup .popupHeader {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  border-bottom: 2px solid black;
-}
-
-.mainDireccion .popupContainer .popup .popupHeader p {
-  -ms-grid-column-align: end;
-      justify-self: end;
-  margin-right: 5px;
-}
-
-.mainDireccion .popupContainer .popup .popupHeader p:hover {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.mainDireccion .popupContainer .popup .popupMensaje {
+  padding: 5px 5px 5px 5px;
   text-align: center;
-  display: -ms-grid;
-  display: grid;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  height: 85px;
 }
 
-.mainDireccion .popupContainer .popup .popupMensaje p {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.mainDireccion .formulario input {
+  width: 250px;
+  margin-bottom: 10px;
 }
 
-.mainDireccion .aparecer {
-  visibility: visible;
+.mainDireccion .formulario textarea {
+  resize: none;
+  width: 250px;
+}
+
+.mainDireccion .formulario .mensajeError {
+  font-size: 20px;
 }
 
 .asideDireccion {
@@ -232,5 +246,63 @@ body {
   -ms-grid-column-align: end;
       justify-self: end;
   position: absolute;
+  text-align: center;
+}
+
+footer {
+  background-color: #2b2d42;
+  text-align: center;
+  padding-bottom: 10px;
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: 5px;
+  -ms-grid-rows: 0.5fr 1fr 0.5fr;
+      grid-template-rows: 0.5fr 1fr 0.5fr;
+  color: whitesmoke;
+}
+
+footer h2, footer h3 {
+  font-size: 20px;
+}
+
+footer .redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+footer .redes div {
+  border-radius: 50%;
+  background-color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  margin-right: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .redes div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+footer .redes div a img {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 /*# sourceMappingURL=style.css.map */

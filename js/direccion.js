@@ -25,12 +25,15 @@ function enviarDatos() {
         }
         let enJSON = JSON.stringify(datosDelPedido);
         localStorage.setItem("Pedido", enJSON);
-        let mensaje = document.querySelector(".mensajeError");
-        mensaje.innerHTML = '';
         abrirMensaje();
     }else {
-        let mensaje = document.querySelector(".mensajeError");
-        mensaje.innerHTML = '<h4>Complete correctamente los campos</h4>';
+        Swal.fire({
+            title: 'Error!',
+            text: 'Complete sus datos correctamente',
+            icon: 'error',
+            showConfirmButton: false,
+            timer: 3000,
+        })
     }
 }
 

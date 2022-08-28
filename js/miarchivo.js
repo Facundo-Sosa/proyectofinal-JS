@@ -119,7 +119,8 @@ function mostrarCarrito() {
             btnBorrar[i].addEventListener("click", () => borrar(i))
         }
         let btnPagar = document.createElement("div")
-        btnPagar.innerHTML = `<a href="./secciones/direccion.html">Ir a pagar</a>`
+        btnPagar.innerHTML = `<a href="./secciones/direccion.html">IR A PAGAR</a>`
+        btnPagar.className = "btnPagar";
         btnPagar.addEventListener("click", () => {
             total();
             mandarStorage();
