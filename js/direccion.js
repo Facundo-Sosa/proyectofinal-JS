@@ -13,6 +13,7 @@ const datos = document.querySelectorAll(".datos");
 function enviarDatos() {
     if ((datos[0].value!='') && (datos[1].value!='') && (datos[2].value!='') && (datos[3].value!='') && (datos[4].value!='')) {
         let datosDelPedido = {
+            NumeroPedido : parseInt(Math.random() * 10000),
             Fecha: new Date().toLocaleString(),
             Direccion: datos[0].value,
             Piso: datos[1].value,
@@ -21,7 +22,7 @@ function enviarDatos() {
             Telefono: datos[4].value,
             Pedido: localStorage.getItem("listaPedido"),
             Aclaracion: datos[5].value,
-            Total: `$ ${pedidoTotal}` 
+            Total: parseInt(`$ ${pedidoTotal}`) 
         }
         let enJSON = JSON.stringify(datosDelPedido);
         localStorage.setItem("Pedido", enJSON);

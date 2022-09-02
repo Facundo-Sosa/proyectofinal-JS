@@ -1,0 +1,32 @@
+[
+    {
+        "nombre" : "MUZZARELLA",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    },
+    {
+        "nombre" : "MUZZARELLA CON JAMON",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    },
+    {
+        "nombre" : "NAPOLITANA",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    },
+    {
+        "nombre" : "PROVOLONE",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    },
+    {
+        "nombre" : "AMERICANA CON JAMON",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    },
+     {
+        "nombre" : "PRIMAVERA",
+        "precio" : 1100,
+        "imagen" : "img/pizza.jpg"
+    }
+]

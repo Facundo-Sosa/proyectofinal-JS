@@ -8,29 +8,42 @@ class Producto {
 
 let pizzas =[];
 let empanadas = [];
+let loading = document.querySelector(".cargando")
 
-function ingresoProducto(num, nom, pre, imagen) {
-    if (num == 1) {
-        pizzas.push(new Producto(nom, pre, imagen));
-    }else if (num == 2) {
-        empanadas.push(new Producto(nom, pre, imagen));
-    }
+const cargarProductos = async () => {
+    let mainProductos = document.querySelector(".mainProductos")
+    await fetch("../JSON/pizzas.json")
+            .then((response) => response.json())
+            .then((data) => {
+                pizzas = data;
+                listaPizzas();
+            })
+            .catch((error) => {
+                mainProductos.innerHTML = ` <div class="mensajeError">
+                                                <img src="/img/error.png" height="200px" alt="">
+                                                <h1>Lo sentimos pero ha ocurrido un error</h1>
+                                            </div>`
+            })
+            .finally (() => {
+                loading.className = "desaparecer"
+            })
+    await fetch("../JSON/empanadas.json")
+            .then((response) => response.json())
+            .then((data) => {
+                empanadas = data;
+                listaEmpanadas();
+            }) 
+            .catch((error) => {
+                mainProductos.innerHTML = ` <div class="mensajeError">
+                                                <img src="/img/error.png" height="200px" alt="">
+                                                <h1>Lo sentimos pero ha ocurrido un error</h1>
+                                            </div>`
+            })
+            .finally (() => {
+                loading.className = "desaparecer"
+            })
 }
-
-ingresoProducto(1, "MUZZARELLA", 1100, "img/pizza.jpg"  );
-ingresoProducto(1, "MUZZARELLA CON JAMON", 1100, "img/pizza.jpg");
-ingresoProducto(1, "NAPOLITANA", 1100, "img/pizza.jpg");
-ingresoProducto(1, "PROVOLONE", 1100, "img/pizza.jpg");
-ingresoProducto(1, "AMERICANA CON JAMON", 1100, "img/pizza.jpg");
-ingresoProducto(1, "PRIMAVERA", 1100, "img/pizza.jpg");
-ingresoProducto(2, "CARNE", 200, "img/empanada.jpg");
-ingresoProducto(2, "JAMON Y QUESO", 200, "img/empanada.jpg");
-ingresoProducto(2, "POLLO", 200, "img/empanada.jpg");
-ingresoProducto(2, "CARNE CRIOLLA", 250, "img/empanada.jpg");
-ingresoProducto(2, "CAPRESSE", 200, "img/empanada.jpg");
-ingresoProducto(2, "HUMITA", 200, "img/empanada.jpg");
-
-
+cargarProductos();
 
 function listaPizzas() {
     const lista = document.querySelector(".pizzas");
@@ -53,9 +66,6 @@ function listaPizzas() {
         })
     }
 }
-listaPizzas();
-
-
 
 function listaEmpanadas() {
     const lista = document.querySelector(".empanadas");
@@ -78,7 +88,7 @@ function listaEmpanadas() {
         })
     }
 }
-listaEmpanadas();
+
 
 let carrito = []
 function agregar(num, gusto) { //

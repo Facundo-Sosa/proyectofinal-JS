@@ -22,6 +22,16 @@ body {
     justify-content: center;
     background-color: #ef233c;
     
+    .mensajeError {
+        display: grid;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    img {
+        justify-self: center;
+
+    }
 }
 
 .pizzas {
@@ -250,3 +260,8 @@ footer {
         }
     }
 }    
+
+.desaparecer {
+    visibility: hidden;
+    position: absolute;
+}

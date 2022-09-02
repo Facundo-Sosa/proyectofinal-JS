@@ -28,6 +28,20 @@ body {
   background-color: #ef233c;
 }
 
+.mainProductos .mensajeError {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 30px;
+}
+
+.mainProductos img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .pizzas, .empanadas {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -304,5 +318,10 @@ footer .redes div a {
 footer .redes div a img {
   -ms-grid-column-align: center;
       justify-self: center;
+}
+
+.desaparecer {
+  visibility: hidden;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,32 @@
+[
+    {
+        "nombre" : "CARNE",
+        "precio" : 200,
+        "imagen" : "img/empanada.jpg"
+    },
+    {
+        "nombre" : "JAMON Y QUESO",
+        "precio" : 200,
+        "imagen" : "img/empanada.jpg"
+    },
+    {
+        "nombre" : "POLLO",
+        "precio" : 200,
+        "imagen" : "img/empanada.jpg"
+    },
+    {
+        "nombre" : "CARNE CRIOLLA",
+        "precio" : 250,
+        "imagen" : "img/empanada.jpg"
+    },
+    {
+        "nombre" : "CAPRESSE",
+        "precio" : 200,
+        "imagen" : "img/empanada.jpg"
+    },
+    {
+        "nombre" : "HUMITA",
+        "precio" : 200,
+        "imagen" : "img/empanada.jpg"
+    }
+]
