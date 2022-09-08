@@ -231,6 +231,7 @@ body {
       -ms-flex-pack: start;
           justify-content: start;
   background-color: #ef233c;
+  padding-bottom: 20px;
 }
 
 .mainDireccion .formulario {
@@ -239,6 +240,8 @@ body {
   margin-top: 20px;
   padding: 5px 5px 5px 5px;
   text-align: center;
+  border-right: 2px outset;
+  border-bottom: 2px outset;
 }
 
 .mainDireccion .formulario input {
@@ -256,11 +259,16 @@ body {
 }
 
 .asideDireccion {
-  margin-top: 100px;
+  margin-top: 110px;
+  margin-right: 50px;
   -ms-grid-column-align: end;
       justify-self: end;
   position: absolute;
   text-align: center;
+  background-color: #d90429;
+  padding: 5px 5px 5px 5px;
+  border-right: 2px outset;
+  border-bottom: 2px outset;
 }
 
 footer {

@@ -47,6 +47,9 @@ function abrirMensaje() {
         timer: 3000,
         confirmButtonText: 'Aceptar'
     })
+    setTimeout(() => {
+        location.href = "../index.html"
+    },3000);
 }
 
 

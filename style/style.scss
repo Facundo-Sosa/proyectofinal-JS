@@ -187,6 +187,7 @@ body {
     display: grid;
     justify-content: start;
     background-color: #ef233c;
+    padding-bottom: 20px;
 
     .formulario {
         background-color: #d90429;
@@ -194,6 +195,8 @@ body {
         margin-top: 20px;
         padding: 5px 5px 5px 5px;
         text-align: center;
+        border-right: 2px outset;
+        border-bottom: 2px outset;
 
         input {
             width: 250px;
@@ -213,10 +216,15 @@ body {
 
 
 .asideDireccion {
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-right: 50px;
     justify-self: end;
     position: absolute;
     text-align: center;
+    background-color: #d90429;
+    padding: 5px 5px 5px 5px;
+    border-right: 2px outset;
+    border-bottom: 2px outset;
 }
 
 //----FOOTER----

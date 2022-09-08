@@ -1,10 +1,3 @@
-class Producto {
-    constructor(nombre, precio, imagen) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.imagen = imagen;
-    }
-}
 
 let pizzas =[];
 let empanadas = [];
@@ -12,7 +5,7 @@ let loading = document.querySelector(".cargando")
 
 const cargarProductos = async () => {
     let mainProductos = document.querySelector(".mainProductos")
-    await fetch("../JSON/pizzas.json")
+    await fetch("../JSON/pizzas.JSON")
             .then((response) => response.json())
             .then((data) => {
                 pizzas = data;
@@ -20,14 +13,14 @@ const cargarProductos = async () => {
             })
             .catch((error) => {
                 mainProductos.innerHTML = ` <div class="mensajeError">
-                                                <img src="/img/error.png" height="200px" alt="">
+                                                <img src="../img/error.png" height="200px" alt="">
                                                 <h1>Lo sentimos pero ha ocurrido un error</h1>
                                             </div>`
             })
             .finally (() => {
                 loading.className = "desaparecer"
             })
-    await fetch("../JSON/empanadas.json")
+    await fetch("../JSON/empanadas.JSON")
             .then((response) => response.json())
             .then((data) => {
                 empanadas = data;
@@ -35,7 +28,7 @@ const cargarProductos = async () => {
             }) 
             .catch((error) => {
                 mainProductos.innerHTML = ` <div class="mensajeError">
-                                                <img src="/img/error.png" height="200px" alt="">
+                                                <img src="../img/error.png" height="200px" alt="">
                                                 <h1>Lo sentimos pero ha ocurrido un error</h1>
                                             </div>`
             })
